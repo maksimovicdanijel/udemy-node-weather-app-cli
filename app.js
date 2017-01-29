@@ -20,11 +20,13 @@ const argv = yargs
 
 geocode.geocodeAddress(argv.address)
     .then((result) => {
+        console.log('Fetching weather for: ', result.address);
+
         return weatherInfo.fetchWeatherData(result.latitude, result.longitude);
     })
 
     .then((weatherInfo) => {
-        console.log(weatherInfo);
+        console.log(`Current temperature is ${weatherInfo.temperature}, and it feels like ${weatherInfo.feelsLike}.`);
     })
 
     .catch((err) => {
