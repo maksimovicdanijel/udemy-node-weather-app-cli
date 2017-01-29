@@ -1,0 +1,7 @@
+{
+    "geocode_api_url": "http://maps.googleapis.com/maps/api/geocode/",
+    "weather_api": {
+        "url": "https://api.darksky.net/forecast/",
+        "apiKey": "d10fc795bbdab421f306128ac07fbac5"
+    }
+}
